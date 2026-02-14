@@ -12,16 +12,13 @@ body {
     padding: 0;
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(to bottom, #a8e6ff, #ffffff);
-    overflow: hidden;
     text-align: center;
+    overflow-x: hidden;
 }
 
-/* Center container */
+/* Container fix */
 .container {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 20px;
+    padding: 40px 20px;
 }
 
 h1 {
@@ -31,7 +28,7 @@ h1 {
 
 .note {
     max-width: 750px;
-    margin: auto;
+    margin: 20px auto;
     background: rgba(255,255,255,0.9);
     padding: 25px;
     border-radius: 15px;
@@ -42,7 +39,7 @@ h1 {
 
 .penguin {
     font-size: 80px;
-    margin-bottom: 10px;
+    margin-top: 20px;
 }
 
 /* Button */
@@ -67,6 +64,7 @@ button:hover {
     top: -50px;
     font-size: 24px;
     animation: fall linear infinite;
+    pointer-events: none;
 }
 
 @keyframes fall {
@@ -84,8 +82,6 @@ button:hover {
 </head>
 
 <body>
-
-<!-- Background Music -->
 
 <audio id="bgMusic" loop>
     <source src="bg.mp3" type="audio/mpeg">
@@ -128,12 +124,10 @@ button:hover {
 </div>
 
 <script>
-// Play music (browser autoplay restriction)
 function playMusic() {
     document.getElementById("bgMusic").play();
 }
 
-// Falling hearts and kisses
 const symbols = ["❤️", "🥰", "😘"];
 
 function createFall() {
@@ -141,12 +135,12 @@ function createFall() {
     element.classList.add("fall");
     element.innerText = symbols[Math.floor(Math.random() * symbols.length)];
     element.style.left = Math.random() * 100 + "vw";
-    element.style.animationDuration = (3 + Math.random() * 4) + "s";
+    element.style.animationDuration = (4 + Math.random() * 4) + "s";
     document.body.appendChild(element);
 
     setTimeout(() => {
         element.remove();
-    }, 7000);
+    }, 8000);
 }
 
 setInterval(createFall, 300);

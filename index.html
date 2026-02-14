@@ -1,770 +1,101 @@
 <!DOCTYPE html><html>
 <head>
-<title>For My Love ❤️</title>
-<style>
+<title>My Love Letter ❤️</title><style>
 body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
     overflow: hidden;
-}/* Penguins Background */
-.penguin {
-position: absolute;
-bottom: 20px;
-width: 80px;
-animation: float 6s ease-in-out infinite;
+    text-align: center;
 }
 
-.p1 { left: 20%; animation-delay: 0s; }
-.p2 { left: 40%; animation-delay: 1s; }
-.p3 { left: 60%; animation-delay: 2s; }
-.p4 { left: 80%; animation-delay: 3s; }
-
-@keyframes float {
-0%,100% { transform: translateY(0px); }
-50% { transform: translateY(-20px); }
-}
-
-/* Message Box */
-.container {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-background: white;
-padding: 30px;
-border-radius: 20px;
-width: 80%;
-max-width: 500px;
-text-align: center;
-box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+/* Letter Box */
+.letter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255,255,255,0.95);
+    padding: 35px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 520px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
 }
 
 h1 {
-color: #ff4d6d;
+    color: #ff4d6d;
 }
 
 p {
-font-size: 18px;
-color: #333;
-line-height: 1.6;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
 }
-</style>
 
-</head><body><!-- Penguins (kissing emoji style) --><img class="penguin p1" src="https://cdn-icons-png.flaticon.com/512/616/616554.png">
-<img class="penguin p2" src="https://cdn-icons-png.flaticon.com/512/616/616554.png">
-<img class="penguin p3" src="https://cdn-icons-png.flaticon.com/512/616/616554.png">
-<img class="penguin p4" src="https://cdn-icons-png.flaticon.com/512/616/616554.png"><div class="container">
+/* Falling Hearts */
+.heart {
+    position: fixed;
+    top: -10px;
+    color: #ff4d6d;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+/* Penguin Background */
+.penguin {
+    position: fixed;
+    bottom: 10px;
+    width: 90px;
+    opacity: 0.8;
+}
+
+.p1 { left: 10%; }
+.p2 { right: 10%; }
+</style></head><body><!-- Background Music --><audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_3caa1c3d36.mp3?filename=romantic-background-112191.mp3" type="audio/mp3">
+</audio><!-- Penguins --><img class="penguin p1" src="https://cdn-icons-png.flaticon.com/512/616/616546.png">
+<img class="penguin p2" src="https://cdn-icons-png.flaticon.com/512/616/616546.png"><!-- Letter --><div class="letter">
     <h1>My Open Letter For You ❤️</h1>
     <p>
-    Hey Love,<br><br>
-    I don’t know how to explain everything in words, but I just want you to know one thing…  
-    You are not just a person in my life, you are the feeling that makes my life special.<br><br>Every smile of yours makes my day better. Every little moment with you becomes a memory I never want to lose.<br><br>
+    Hey Love,<br><br>There are so many things I feel for you, and today I just wanted to put them into words.<br><br>
 
-Like these penguins behind, who stay together no matter what…  
-I promise, I’ll always stand with you — in your happy days, your bad days, and every ordinary day in between.<br><br>
+You are not just someone special to me…  
+You are the reason my days feel brighter, my smiles feel real, and my life feels warmer.<br><br>
 
-You are my peace, my happiness, and the best part of my life.<br><br>
+Just like these little hearts falling endlessly, my love for you keeps growing every day — quietly, deeply, and truly.<br><br>
+
+And like the penguins who stay together no matter what,  
+I want you to know that I’m always with you — in your happiness, your tough days, and every little moment in between.<br><br>
+
+You are my peace, my comfort, and the most beautiful part of my life.<br><br>
 
 Happy Valentine’s Day, my love.<br><br>
 
-— Yours Always ❤️
+— Yours, Always ❤️
 </p>
 
-</div></body>
-</html>.box{
-    max-width:520px;
-    margin:20px auto;
-    padding:22px;
-    background:white;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.15);
-    font-size:18px;
-    line-height:1.6;
+</div><!-- Hearts Script --><script>
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+    heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
 }
 
-.hidden{
-    display:none;
-}
-
-.fall{
-    position:fixed;
-    top:-10px;
-    animation: fall linear infinite;
-}
-
-@keyframes fall{
-    to{
-        transform: translateY(100vh);
-        opacity:0;
-    }
-}
-</style>
-</head>
-<body>
-
-<audio id="music" loop>
-<source src="bg.mp3" type="audio/mpeg">
-</audio>
-
-<div class="container">
-
-<div class="penguin" id="topPenguin">🐧❤️🐧</div>
-<h2 id="title"></h2>
-
-<button id="startBtn" onclick="start()">Open Surprise</button>
-
-<!-- Single main box -->
-<div class="box hidden" id="mainBox"></div>
-
-</div>
-
-<script>
-const herName = "Aditi"; // CHANGE NAME HERE
-
-document.getElementById("title").innerHTML =
-"For My Cute Penguin " + herName + " ❤️";
-
-function start(){
-    document.getElementById("music").play();
-    startHearts();
-    document.getElementById("startBtn").style.display="none";
-
-    showLetter();
-}
-
-function showLetter(){
-    document.getElementById("mainBox").classList.remove("hidden");
-    document.getElementById("mainBox").innerHTML = `
-    My dear ${herName}, ❤️<br><br>
-
-    Just like penguins stay with one partner for life,  
-    you are my person, my comfort and my happiness.<br><br>
-
-    You make my world warmer, calmer and more beautiful every day.<br><br>
-
-    I feel lucky to have you, ${herName}.  
-    Sending you love, hugs and kisses 😘💗<br><br>
-
-    Forever your penguin 🐧❤️
-    `;
-
-    setTimeout(showProposal, 5000);
-}
-
-function showProposal(){
-    document.getElementById("mainBox").innerHTML = `
-    <h3>${herName}, will you stay with me forever? ❤️</h3>
-    <button onclick="sayYes()">Yes ❤️</button>
-    <button id="noBtn" onmouseover="moveNo()">No</button>
-    `;
-}
-
-function moveNo(){
-    let btn = document.getElementById("noBtn");
-    btn.style.position = "absolute";
-    btn.style.left = Math.random()*80 + "vw";
-    btn.style.top = Math.random()*80 + "vh";
-}
-
-function sayYes(){
-    document.getElementById("mainBox").innerHTML = `
-    <h2>Yay! I love you so much, ${herName} ❤️</h2>
-    <div style="font-size:70px;">🐧🤗🐧</div>
-    <p>Forever and always ❤️</p>
-    `;
-    document.getElementById("topPenguin").innerHTML = "🐧🤗🐧";
-}
-
-function startHearts(){
-    const items = ["❤️","💖","💗","😘","💞"];
-    setInterval(function(){
-        let el = document.createElement("div");
-        el.className = "fall";
-        el.innerHTML = items[Math.floor(Math.random()*items.length)];
-        el.style.left = Math.random()*100 + "vw";
-        el.style.fontSize = (16 + Math.random()*20) + "px";
-        el.style.animationDuration = (3 + Math.random()*3) + "s";
-        document.body.appendChild(el);
-        setTimeout(()=>{el.remove();},6000);
-    },300);
-}
-</script>
-
-</body>
+setInterval(createHeart, 300);
+</script></body>
 </html>
-.hidden{
-    display:none;
-}
-
-.fall{
-    position:fixed;
-    top:-10px;
-    animation: fall linear infinite;
-}
-
-@keyframes fall{
-    to{
-        transform: translateY(100vh);
-        opacity:0;
-    }
-}
-</style>
-</head>
-<body>
-
-<audio id="music" loop>
-<source src="bg.mp3" type="audio/mpeg">
-</audio>
-
-<div class="container">
-
-<div class="penguin" id="topPenguin">🐧❤️🐧</div>
-<h2 id="title"></h2>
-
-<button id="startBtn" onclick="start()">Open Surprise</button>
-
-<!-- Single main box -->
-<div class="box hidden" id="mainBox"></div>
-
-</div>
-
-<script>
-const herName = "Aditi"; // CHANGE NAME HERE
-
-document.getElementById("title").innerHTML =
-"For My Cute Penguin " + herName + " ❤️";
-
-function start(){
-    document.getElementById("music").play();
-    startHearts();
-    document.getElementById("startBtn").style.display="none";
-
-    showLetter();
-}
-
-function showLetter(){
-    document.getElementById("mainBox").classList.remove("hidden");
-    document.getElementById("mainBox").innerHTML = `
-    My dear ${herName}, ❤️<br><br>
-
-    Just like penguins stay with one partner for life,  
-    you are my person, my comfort and my happiness.<br><br>
-
-    You make my world warmer, calmer and more beautiful every day.<br><br>
-
-    I feel lucky to have you, ${herName}.  
-    Sending you love, hugs and kisses 😘💗<br><br>
-
-    Forever your penguin 🐧❤️
-    `;
-
-    setTimeout(showProposal, 5000);
-}
-
-function showProposal(){
-    document.getElementById("mainBox").innerHTML = `
-    <h3>${herName}, will you stay with me forever? ❤️</h3>
-    <button onclick="sayYes()">Yes ❤️</button>
-    <button id="noBtn" onmouseover="moveNo()">No</button>
-    `;
-}
-
-function moveNo(){
-    let btn = document.getElementById("noBtn");
-    btn.style.position = "absolute";
-    btn.style.left = Math.random()*80 + "vw";
-    btn.style.top = Math.random()*80 + "vh";
-}
-
-function sayYes(){
-    document.getElementById("mainBox").innerHTML = `
-    <h2>Yay! I love you so much, ${herName} ❤️</h2>
-    <div style="font-size:70px;">🐧🤗🐧</div>
-    <p>Forever and always ❤️</p>
-    `;
-    document.getElementById("topPenguin").innerHTML = "🐧🤗🐧";
-}
-
-function startHearts(){
-    const items = ["❤️","💖","💗","😘","💞"];
-    setInterval(function(){
-        let el = document.createElement("div");
-        el.className = "fall";
-        el.innerHTML = items[Math.floor(Math.random()*items.length)];
-        el.style.left = Math.random()*100 + "vw";
-        el.style.fontSize = (16 + Math.random()*20) + "px";
-        el.style.animationDuration = (3 + Math.random()*3) + "s";
-        document.body.appendChild(el);
-        setTimeout(()=>{el.remove();},6000);
-    },300);
-}
-</script>
-
-</body>
-</html>.box{
-    max-width:520px;
-    margin:20px auto;
-    padding:20px;
-    background:white;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.15);
-    font-size:18px;
-    display:none;
-    line-height:1.6;
-}
-
-.fall{
-    position:fixed;
-    top:-10px;
-    animation: fall linear infinite;
-}
-
-@keyframes fall{
-    to{
-        transform: translateY(100vh);
-        opacity:0;
-    }
-}
-</style>
-</head>
-<body>
-
-<audio id="music" loop>
-<source src="bg.mp3" type="audio/mpeg">
-</audio>
-
-<div class="container">
-
-<div class="penguins" id="penguinTop">🐧❤️🐧</div>
-<h2 id="title"></h2>
-
-<button onclick="start()">Open Surprise</button>
-
-<div class="box" id="letter"></div>
-
-<div class="box" id="proposal">
-    <h3 id="proposalText"></h3>
-    <button onclick="yes()">Yes ❤️</button>
-    <button id="noBtn" onmouseover="moveNo()">No</button>
-</div>
-
-<div class="box" id="final">
-    <h2 id="finalText"></h2>
-    <div style="font-size:70px;">🐧🤗🐧</div>
-    <p>Forever and always ❤️</p>
-</div>
-
-</div>
-
-<script>
-const herName = "Aditi"; // CHANGE NAME HERE
-
-document.getElementById("title").innerHTML =
-"For My Cute Penguin " + herName + " ❤️";
-
-function start(){
-    document.getElementById("music").play();
-    startHearts();
-
-    let text = `
-    My dear ${herName}, ❤️<br><br>
-
-    Just like penguins stay with one partner for life,  
-    you are my person, my comfort, and my happiness.<br><br>
-
-    You make my world warmer and brighter every day.<br><br>
-
-    I feel lucky to have you, ${herName}.  
-    Sending you love, hugs and kisses 😘💗<br><br>
-
-    Forever your penguin 🐧❤️
-    `;
-
-    document.getElementById("letter").innerHTML = text;
-    document.getElementById("letter").style.display = "block";
-
-    setTimeout(showProposal, 5000);
-}
-
-function showProposal(){
-    document.getElementById("proposalText").innerHTML =
-    herName + ", will you stay with me forever? ❤️";
-    document.getElementById("proposal").style.display = "block";
-}
-
-function moveNo(){
-    let btn = document.getElementById("noBtn");
-    btn.style.position = "absolute";
-    btn.style.left = Math.random()*80 + "vw";
-    btn.style.top = Math.random()*80 + "vh";
-}
-
-function yes(){
-    document.getElementById("proposal").style.display = "none";
-    document.getElementById("finalText").innerHTML =
-    "Yay! I love you so much, " + herName + " ❤️";
-    document.getElementById("final").style.display = "block";
-    document.getElementById("penguinTop").innerHTML = "🐧🤗🐧";
-}
-
-function startHearts(){
-    const items = ["❤️","💖","💗","😘","💞"];
-    setInterval(function(){
-        let el = document.createElement("div");
-        el.className = "fall";
-        el.innerHTML = items[Math.floor(Math.random()*items.length)];
-        el.style.left = Math.random()*100 + "vw";
-        el.style.fontSize = (16 + Math.random()*20) + "px";
-        el.style.animationDuration = (3 + Math.random()*3) + "s";
-        document.body.appendChild(el);
-        setTimeout(()=>{el.remove();},6000);
-    },300);
-}
-</script>
-
-</body>
-</html>    border-radius:12px;
-    cursor:pointer;
-    margin:10px;
-}
-
-button:hover{
-    background:#e6005c;
-}
-
-.letter, .proposal, .final{
-    max-width:520px;
-    margin:25px auto;
-    padding:25px;
-    background:white;
-    border-radius:15px;
-    box-shadow:0 6px 25px rgba(0,0,0,0.2);
-    font-size:18px;
-    color:#333;
-    display:none;
-    line-height:1.6;
-}
-
-.fall{
-    position:fixed;
-    top:-10px;
-    font-size:20px;
-    animation: fall linear infinite;
-}
-
-@keyframes fall{
-    to{
-        transform: translateY(100vh);
-        opacity:0;
-    }
-}
-</style>
-</head>
-<body>
-
-<audio id="bgMusic" loop>
-    <source src="bg.mp3" type="audio/mpeg">
-</audio>
-
-<div class="container">
-
-    <div class="penguins" id="penguinEmoji">🐧❤️🐧</div>
-    <h2 id="titleText"></h2>
-
-    <button onclick="startLove()">Open Your Surprise</button>
-
-    <div class="letter" id="letter"></div>
-
-    <div class="proposal" id="proposal">
-        <h3 id="proposalText"></h3>
-        <button onclick="sayYes()">Yes ❤️</button>
-        <button id="noBtn" onmouseover="moveNo()">No</button>
-    </div>
-
-    <div class="final" id="finalMessage">
-        <h2 id="finalText"></h2>
-        <div style="font-size:80px;">🐧🤗🐧</div>
-        <p>Forever and always ❤️</p>
-    </div>
-
-</div>
-
-<script>
-const herName = "Aditi"; // CHANGE NAME HERE
-
-document.getElementById("titleText").innerHTML = "For My Cute Penguin " + herName + " ❤️";
-
-function startLove(){
-    document.getElementById("bgMusic").play();
-    startFalling();
-
-    document.getElementById("penguinEmoji").innerHTML = "🐧💞🐧";
-
-    const letterText = `
-    My dear ${herName}, ❤️<br><br>
-
-    Just like penguins stay loyal to one partner for life,  
-    I want you to know that you are my person, my comfort, and my happiness.  
-
-    In my busy days, you are my peace.  
-    In my difficult moments, you are my strength.  
-    And in my happiest moments, you are the reason behind my smile.  
-
-    You make my world warmer, softer, and more beautiful every day.  
-
-    I feel lucky to have you in my life, ${herName}.  
-    Sending you lots of love, hugs and kisses 😘💗  
-
-    Forever your penguin 🐧❤️
-    `;
-
-    document.getElementById("letter").innerHTML = letterText;
-    document.getElementById("letter").style.display = "block";
-
-    setTimeout(showProposal, 6000);
-}
-
-function showProposal(){
-    document.getElementById("proposalText").innerHTML =
-    herName + ", will you stay with me forever? ❤️";
-
-    document.getElementById("proposal").style.display = "block";
-}
-
-function moveNo(){
-    let btn = document.getElementById("noBtn");
-    btn.style.position = "absolute";
-    btn.style.left = Math.random()*80 + "vw";
-    btn.style.top = Math.random()*80 + "vh";
-}
-
-function sayYes(){
-    document.getElementById("proposal").style.display = "none";
-    document.getElementById("finalText").innerHTML =
-    "Yay! I love you so much, " + herName + " ❤️";
-
-    document.getElementById("finalMessage").style.display = "block";
-    document.getElementById("penguinEmoji").innerHTML = "🐧🤗🐧";
-}
-
-function startFalling(){
-    const symbols = ["❤️","💖","💗","😘","💞"];
-    setInterval(function(){
-        let item = document.createElement("div");
-        item.className = "fall";
-        item.innerHTML = symbols[Math.floor(Math.random()*symbols.length)];
-        item.style.left = Math.random()*100 + "vw";
-        item.style.fontSize = (16 + Math.random()*24) + "px";
-        item.style.animationDuration = (3 + Math.random()*3) + "s";
-        document.body.appendChild(item);
-
-        setTimeout(()=>{item.remove();},6000);
-    },300);
-}
-</script>
-
-</body>
-</html>    background:#ff4d88;
-    color:white;
-    border:none;
-    border-radius:12px;
-    cursor:pointer;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-button:hover{
-    background:#e6005c;
-}
-
-/* Letter box */
-.letter{
-    max-width:520px;
-    margin:25px auto;
-    padding:25px;
-    background:white;
-    border-radius:15px;
-    box-shadow:0 6px 25px rgba(0,0,0,0.2);
-    font-size:18px;
-    color:#333;
-    display:none;
-    line-height:1.6;
-}
-
-/* Falling hearts & kisses */
-.fall{
-    position:fixed;
-    top:-10px;
-    font-size:20px;
-    animation: fall linear infinite;
-}
-
-@keyframes fall{
-    to{
-        transform: translateY(100vh);
-        opacity:0;
-    }
-}
-</style>
-</head>
-<body>
-
-<!-- Background Music -->
-<audio id="bgMusic" loop>
-    <source src="bg.mp3" type="audio/mpeg">
-</audio>
-
-<div class="container">
-
-    <div class="penguin">🐧💞🐧</div>
-    <h2>For My Cute Penguin</h2>
-
-    <button onclick="startLove()">Open Your Surprise</button>
-
-    <div class="letter" id="letter">
-        My Love ❤️<br><br>
-
-        Just like penguins stay loyal to one partner for life,  
-        I want you to know that you are my person, my comfort, and my happiness.  
-
-        In my busy days, you are my peace.  
-        In my difficult moments, you are my strength.  
-        And in my happiest moments, you are the reason behind my smile.  
-
-        You make my world softer, warmer, and more beautiful every single day.  
-
-        I may not always say it perfectly, but I truly care for you, respect you, and feel lucky to have you in my life.  
-
-        Sending you lots of love, hugs and kisses 😘💗  
-
-        Forever your penguin 🐧❤️  
-    </div>
-
-</div>
-
-<script>
-function startLove(){
-    document.getElementById("letter").style.display="block";
-    document.getElementById("bgMusic").play();
-    startFalling();
-}
-
-/* Hearts and kisses animation */
-function startFalling(){
-    const symbols = ["❤️","💖","💗","😘","💞"];
-    setInterval(function(){
-        let item = document.createElement("div");
-        item.className = "fall";
-        item.innerHTML = symbols[Math.floor(Math.random()*symbols.length)];
-        item.style.left = Math.random()*100 + "vw";
-        item.style.fontSize = (16 + Math.random()*24) + "px";
-        item.style.animationDuration = (3 + Math.random()*3) + "s";
-        document.body.appendChild(item);
-
-        setTimeout(()=>{item.remove();},6000);
-    },300);
-}
-</script>
-
-</body>
-</html>    margin:20px auto;
-    padding:25px;
-    background:white;
-    border-radius:15px;
-    box-shadow:0 6px 20px rgba(0,0,0,0.15);
-    font-size:18px;
-    color:#333;
-    display:none;
-}
-
-/* Button */
-button{
-    padding:14px 25px;
-    font-size:18px;
-    background:#ff4d88;
-    color:white;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-    margin-top:15px;
-}
-
-button:hover{
-    background:#e6005c;
-}
-
-/* Falling hearts */
-.heart{
-    position:fixed;
-    top:-10px;
-    color:#ff4d88;
-    animation: fall linear infinite;
-}
-
-@keyframes fall{
-    to{
-        transform: translateY(100vh);
-        opacity:0;
-    }
-}
-</style>
-</head>
-<body>
-
-<!-- Background Music -->
-<audio id="bgMusic" loop>
-    <source src="bg.mp3" type="audio/mpeg">
-</audio>
-
-<div class="container">
-    <div class="penguin">🐧❤️🐧</div>
-    <h2>To My Cute Penguin</h2>
-
-    <button onclick="openLetter()">Open Your Letter</button>
-
-    <div class="letter" id="loveLetter">
-        My Love,<br><br>
-
-        Just like penguins, who choose one partner and stay together through every season,  
-        I want you to know that you are my person, my comfort, and my happiness.  
-
-        In the cold days of life, you are my warmth.  
-        In my stressful moments, you are my peace.  
-        And in my ordinary days, you are my little piece of magic.  
-
-        I may not say it every time, but you truly mean so much to me.  
-        You make my world brighter, my heart calmer, and my life more beautiful.  
-
-        No matter what happens, I want to walk with you, laugh with you, and grow with you.  
-
-        Forever your penguin 🐧❤️
-    </div>
-</div>
-
-<script>
-function openLetter(){
-    document.getElementById("loveLetter").style.display = "block";
-    document.getElementById("bgMusic").play();
-    startHearts();
-}
-
-/* Falling hearts */
-function startHearts(){
-    setInterval(function(){
-        let heart = document.createElement("div");
-        heart.className = "heart";
-        heart.innerHTML = "❤️";
-        heart.style.left = Math.random()*100 + "vw";
-        heart.style.fontSize = (15 + Math.random()*20) + "px";
-        heart.style.animationDuration = (3 + Math.random()*3) + "s";
-        document.body.appendChild(heart);
-
-        setTimeout(()=>{heart.remove();},6000);
-    },300);
-}
-</script>
-
-</body>
-</html>
-

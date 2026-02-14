@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Penguin ❤️</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    text-align:center;
+    background: linear-gradient(#ccefff, #ffffff);
+    overflow:hidden;
+}
+
+/* Container */
+.container{
+    margin-top:50px;
+    padding:20px;
+}
+
+/* Penguins */
+.penguin{
+    font-size:90px;
+    animation: float 2s infinite alternate;
+}
+
+/* Floating animation */
+@keyframes float{
+    from{transform:translateY(0);}
+    to{transform:translateY(-12px);}
+}
+
+/* Letter box */
+.letter{
+    max-width:500px;
+    margin:20px auto;
+    padding:25px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.15);
+    font-size:18px;
+    color:#333;
+    display:none;
+}
+
+/* Button */
+button{
+    padding:14px 25px;
+    font-size:18px;
+    background:#ff4d88;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+button:hover{
+    background:#e6005c;
+}
+
+/* Falling hearts */
+.heart{
+    position:fixed;
+    top:-10px;
+    color:#ff4d88;
+    animation: fall linear infinite;
+}
+
+@keyframes fall{
+    to{
+        transform: translateY(100vh);
+        opacity:0;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+    <source src="bg.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+    <div class="penguin">🐧❤️🐧</div>
+    <h2>To My Cute Penguin</h2>
+
+    <button onclick="openLetter()">Open Your Letter</button>
+
+    <div class="letter" id="loveLetter">
+        My Love,<br><br>
+
+        Just like penguins, who choose one partner and stay together through every season,  
+        I want you to know that you are my person, my comfort, and my happiness.  
+
+        In the cold days of life, you are my warmth.  
+        In my stressful moments, you are my peace.  
+        And in my ordinary days, you are my little piece of magic.  
+
+        I may not say it every time, but you truly mean so much to me.  
+        You make my world brighter, my heart calmer, and my life more beautiful.  
+
+        No matter what happens, I want to walk with you, laugh with you, and grow with you.  
+
+        Forever your penguin 🐧❤️
+    </div>
+</div>
+
+<script>
+function openLetter(){
+    document.getElementById("loveLetter").style.display = "block";
+    document.getElementById("bgMusic").play();
+    startHearts();
+}
+
+/* Falling hearts */
+function startHearts(){
+    setInterval(function(){
+        let heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random()*100 + "vw";
+        heart.style.fontSize = (15 + Math.random()*20) + "px";
+        heart.style.animationDuration = (3 + Math.random()*3) + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{heart.remove();},6000);
+    },300);
+}
+</script>
+
+</body>
+</html>

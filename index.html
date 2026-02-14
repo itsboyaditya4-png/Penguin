@@ -1,82 +1,92 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penguin Love - For Aditi ❤️</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom, #a8e6ff, #ffffff);
-            font-family: 'Segoe UI', sans-serif;
-            overflow: hidden;
-            text-align: center;
-        }    .container {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 20px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Penguin Love - For Aditi ❤️</title>
 
-    h1 {
-        font-size: 2.5em;
-        color: #ff4d6d;
-    }
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #a8e6ff, #ffffff);
+    overflow: hidden;
+    text-align: center;
+}
 
-    .note {
-        max-width: 700px;
-        margin: auto;
-        font-size: 1.2em;
-        line-height: 1.6;
-        background: rgba(255,255,255,0.85);
-        padding: 25px;
-        border-radius: 15px;
-        box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    }
+/* Center container */
+.container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+}
 
-    /* Penguin */
-    .penguin {
-        font-size: 80px;
-        margin-bottom: 10px;
-    }
+h1 {
+    color: #ff4d6d;
+    font-size: 2.5em;
+}
 
-    /* Falling hearts and kisses */
-    .fall {
-        position: fixed;
-        top: -50px;
-        font-size: 24px;
-        animation: fall linear infinite;
-    }
+.note {
+    max-width: 750px;
+    margin: auto;
+    background: rgba(255,255,255,0.9);
+    padding: 25px;
+    border-radius: 15px;
+    font-size: 1.2em;
+    line-height: 1.7;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
 
-    @keyframes fall {
-        0% {
-            transform: translateY(-50px);
-            opacity: 1;
-        }
-        100% {
-            transform: translateY(110vh);
-            opacity: 0.5;
-        }
-    }
+.penguin {
+    font-size: 80px;
+    margin-bottom: 10px;
+}
 
-    button {
-        margin-top: 20px;
-        padding: 10px 20px;
-        font-size: 16px;
-        border: none;
-        border-radius: 10px;
-        background-color: #ff4d6d;
-        color: white;
-        cursor: pointer;
-    }
+/* Button */
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff4d6d;
+    color: white;
+    cursor: pointer;
+}
 
-    button:hover {
-        background-color: #ff1f4b;
+button:hover {
+    background-color: #ff1f4b;
+}
+
+/* Falling hearts & kisses */
+.fall {
+    position: fixed;
+    top: -50px;
+    font-size: 24px;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px);
+        opacity: 1;
     }
+    100% {
+        transform: translateY(110vh);
+        opacity: 0.6;
+    }
+}
 </style>
 
 </head>
-<body><!-- Background Music -->
+
+<body>
+
+<!-- Background Music -->
+
 <audio id="bgMusic" loop>
     <source src="bg.mp3" type="audio/mpeg">
 </audio>
@@ -85,57 +95,61 @@
     <div class="penguin">🐧❤️🐧</div>
     <h1>Happy Valentine’s Day Aditi</h1>
 
-    <div class="note">
-        Dear Aditi,
+```
+<div class="note">
+    Dear Aditi,<br><br>
 
-        Do you know why I chose penguins for you?
+    Do you know why I chose penguins for you?<br><br>
 
-        Because penguins don’t just love… they choose one partner and stay loyal through every storm, every winter, and every long journey.
+    Because penguins don’t just love… they choose one partner and stay loyal through every storm, every winter, and every long journey.<br><br>
 
-        And that’s exactly how I feel about you.
+    And that’s exactly how I feel about you.<br><br>
 
-        In this huge world, my heart chose you — not for a moment, not for a season, but for something that feels forever.
+    In this huge world, my heart chose you — not for a moment, not for a season, but for something that feels forever.<br><br>
 
-        Like two little penguins walking side by side on ice, even when life gets cold, I just want to keep walking with you… slowly, honestly, and always together.
+    Like two little penguins walking side by side on ice, even when life gets cold, I just want to keep walking with you… slowly, honestly, and always together.<br><br>
 
-        You make my days warmer, my thoughts softer, and my world happier without even trying.
+    You make my days warmer, my thoughts softer, and my world happier without even trying.<br><br>
 
-        If love were a place, it would be wherever you are.
-        If peace had a name, it would be you.
+    If love were a place, it would be wherever you are.<br>
+    If peace had a name, it would be you.<br><br>
 
-        So this Valentine’s Day, I just want to say…
+    So this Valentine’s Day, I just want to say…<br><br>
 
-        I’m yours — in the calm days, the crazy days, and every little moment in between.
+    I’m yours — in the calm days, the crazy days, and every little moment in between.<br><br>
 
-        Forever your penguin,
-        Adi ❤️
-    </div>
+    <b>Forever your penguin,<br>
+    Adi ❤️</b>
+</div>
 
-    <button onclick="playMusic()">Play Music 🎵</button>
+<button onclick="playMusic()">Play Music 🎵</button>
+```
+
 </div>
 
 <script>
-    // Play music on button click (browser autoplay restriction)
-    function playMusic() {
-        document.getElementById("bgMusic").play();
-    }
+// Play music (browser autoplay restriction)
+function playMusic() {
+    document.getElementById("bgMusic").play();
+}
 
-    // Create falling hearts and kisses
-    const symbols = ["❤️","🥰","😘"];
-    function createFall() {
-        const fall = document.createElement("div");
-        fall.classList.add("fall");
-        fall.innerText = symbols[Math.floor(Math.random() * symbols.length)];
-        fall.style.left = Math.random() * 100 + "vw";
-        fall.style.animationDuration = (3 + Math.random() * 4) + "s";
-        document.body.appendChild(fall);
+// Falling hearts and kisses
+const symbols = ["❤️", "🥰", "😘"];
 
-        setTimeout(() => {
-            fall.remove();
-        }, 7000);
-    }
+function createFall() {
+    const element = document.createElement("div");
+    element.classList.add("fall");
+    element.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+    element.style.left = Math.random() * 100 + "vw";
+    element.style.animationDuration = (3 + Math.random() * 4) + "s";
+    document.body.appendChild(element);
 
-    setInterval(createFall, 300);
+    setTimeout(() => {
+        element.remove();
+    }, 7000);
+}
+
+setInterval(createFall, 300);
 </script>
 
 </body>

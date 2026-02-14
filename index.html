@@ -1,40 +1,79 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html>
 <head>
-<meta charset="UTF-8">
 <title>For My Love ❤️</title>
-
 <style>
-body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    text-align:center;
-    background: linear-gradient(#ffd6e7,#ffffff);
-    overflow:hidden;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    overflow: hidden;
+}/* Penguins Background */
+.penguin {
+position: absolute;
+bottom: 20px;
+width: 80px;
+animation: float 6s ease-in-out infinite;
 }
 
-.container{
-    margin-top:50px;
-    padding:20px;
+.p1 { left: 20%; animation-delay: 0s; }
+.p2 { left: 40%; animation-delay: 1s; }
+.p3 { left: 60%; animation-delay: 2s; }
+.p4 { left: 80%; animation-delay: 3s; }
+
+@keyframes float {
+0%,100% { transform: translateY(0px); }
+50% { transform: translateY(-20px); }
 }
 
-.penguin{
-    font-size:80px;
-    margin-bottom:10px;
+/* Message Box */
+.container {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: white;
+padding: 30px;
+border-radius: 20px;
+width: 80%;
+max-width: 500px;
+text-align: center;
+box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-button{
-    padding:12px 22px;
-    font-size:18px;
-    background:#ff4d88;
-    color:white;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-    margin:10px;
+h1 {
+color: #ff4d6d;
 }
 
-.box{
+p {
+font-size: 18px;
+color: #333;
+line-height: 1.6;
+}
+</style>
+
+</head><body><!-- Penguins (kissing emoji style) --><img class="penguin p1" src="https://cdn-icons-png.flaticon.com/512/616/616554.png">
+<img class="penguin p2" src="https://cdn-icons-png.flaticon.com/512/616/616554.png">
+<img class="penguin p3" src="https://cdn-icons-png.flaticon.com/512/616/616554.png">
+<img class="penguin p4" src="https://cdn-icons-png.flaticon.com/512/616/616554.png"><div class="container">
+    <h1>My Open Letter For You ❤️</h1>
+    <p>
+    Hey Love,<br><br>
+    I don’t know how to explain everything in words, but I just want you to know one thing…  
+    You are not just a person in my life, you are the feeling that makes my life special.<br><br>Every smile of yours makes my day better. Every little moment with you becomes a memory I never want to lose.<br><br>
+
+Like these penguins behind, who stay together no matter what…  
+I promise, I’ll always stand with you — in your happy days, your bad days, and every ordinary day in between.<br><br>
+
+You are my peace, my happiness, and the best part of my life.<br><br>
+
+Happy Valentine’s Day, my love.<br><br>
+
+— Yours Always ❤️
+</p>
+
+</div></body>
+</html>.box{
     max-width:520px;
     margin:20px auto;
     padding:22px;
